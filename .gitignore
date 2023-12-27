@@ -1,0 +1,27 @@
+*.DS_Store
+*.log
+*.tsbuildinfo
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+**/node_modules/
+**/package-lock.json
+
+**/dist/*
+dist
+
+# storybook
+**/storybook-static/
+
+# next.js
+**/.next/
+**/out/
+
+# production
+**/build

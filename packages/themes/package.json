@@ -8,13 +8,15 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./themes.css": "./dist/themes.css"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && npm run build:js && npm run build:type",
-    "build:js": "node build.js",
+    "build": "npm run clean && npm run build:js && npm run build:type && npm run build:css",
+    "build:js": "node ./build.js",
     "build:type": "tsc --emitDeclarationOnly",
+    "build:css": "node ./scripts/build-css-module.js",
     "clean": "rm -rf dist"
   },
   "devDependencies": {

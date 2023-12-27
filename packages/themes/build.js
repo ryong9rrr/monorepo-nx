@@ -26,7 +26,6 @@ const baseConfig = {
 Promise.all([
   esbuild.build({
     ...baseConfig,
-    target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
     format: 'esm',
   }),
   esbuild.build({

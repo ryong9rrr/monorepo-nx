@@ -1,4 +1,4 @@
-import run from '@repo/esbuild-config';
+import run from '@package/esbuild-config';
 import pkg from './package.json' assert { type: 'json' };
 import { vanillaExtractPlugin } from '@vanilla-extract/esbuild-plugin';
 

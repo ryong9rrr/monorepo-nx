@@ -8,6 +8,19 @@ const toCssCasting = (str) => {
     .toLowerCase()
 }
 
+const generateCssVariables = (obj) => {
+  return Object.entries(obj)
+    .map(([mainKey, mainValue]) =>
+      Object.entries(mainValue)
+        .map(
+          ([subKey, subValue]) =>
+            `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`,
+        )
+        .join('\n'),
+    )
+    .join('\n')
+}
+
 const generateThemeCssVariables = () => {
   const cssString = []
 
@@ -16,39 +29,26 @@ const generateThemeCssVariables = () => {
       Object.entries(value.$static).forEach(([colorKey, colorValue]) => {
         if (colorKey === 'light') {
           const selector = ':root'
-
-          const cssVariables = Object.entries(colorValue)
-            .map(([mainKey, mainValue]) =>
-              Object.entries(mainValue)
-                .map(
-                  ([subKey, subValue]) =>
-                    `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`,
-                )
-                .join('\n'),
-            )
-            .join('\n')
+          const cssVariables = generateCssVariables(colorValue)
 
           cssString.push(`${selector} {\n${cssVariables}\n}`)
         }
 
         if (colorKey === 'dark') {
           const selector = ':root .theme-dark'
-
-          const cssVariables = Object.entries(colorValue)
-            .map(([mainKey, mainValue]) =>
-              Object.entries(mainValue)
-                .map(
-                  ([subKey, subValue]) =>
-                    `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`,
-                )
-                .join('\n'),
-            )
-            .join('\n')
+          const cssVariables = generateCssVariables(colorValue)
 
           cssString.push(`${selector} {\n${cssVariables}\n}`)
         }
       })
+
+      return
     }
+
+    const selector = ':root'
+    const cssVariables = generateCssVariables(value)
+
+    return cssString.push(`${selector} {\n${cssVariables}\n}`)
   })
 
   return cssString.join('\n')

@@ -6,8 +6,8 @@
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"@repo/esbuild-config: test is empty\"",
-    "build": "echo \"@repo/esbuild-config: build is empty\""
+    "test": "echo \"esbuild-config test\"",
+    "build": "echo \"esbuild-config build\""
   },
   "devDependencies": {
     "esbuild": "^0.16.17"

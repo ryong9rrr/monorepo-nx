@@ -12,7 +12,7 @@
     "./themes.css": "./dist/themes.css"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Tada!\" && exit 1",
     "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
     "build:js": "node ./build.js",
     "build:type": "yarn tsc --emitDeclarationOnly",

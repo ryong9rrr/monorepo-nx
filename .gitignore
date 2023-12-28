@@ -1,7 +1,9 @@
+# OS
 *.DS_Store
 *.log
 *.tsbuildinfo
 
+# yarn berry
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -10,8 +12,8 @@
 !.yarn/versions
 .pnp.*
 
+# build
 **/node_modules/
-
 **/dist/*
 dist
 
@@ -25,6 +27,8 @@ dist
 # production
 **/build
 
+# nx
 .nx/
 
+# eslint
 .eslintcache

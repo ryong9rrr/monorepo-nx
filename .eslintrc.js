@@ -28,7 +28,7 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['**/dist/**/*', '.eslintrc.js'],
+  ignorePatterns: ['**/dist/**/*', '.eslintrc.js', '**/*.js'],
   settings: {
     'import/resolver': {
       typescript: {},

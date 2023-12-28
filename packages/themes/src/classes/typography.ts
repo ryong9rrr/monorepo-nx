@@ -1,4 +1,4 @@
-import { typography } from '../variables'
+import { typography } from '../variables';
 
 export const heading = {
   '4xl': {
@@ -41,7 +41,7 @@ export const heading = {
     fontWeight: typography.fontWeight[700],
     lineHeight: typography.lineHeight[120],
   },
-}
+};
 
 export const text = {
   '6xl': {
@@ -94,4 +94,4 @@ export const text = {
     fontWeight: typography.fontWeight[400],
     lineHeight: typography.lineHeight[150],
   },
-}
+};

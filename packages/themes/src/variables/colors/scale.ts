@@ -9,7 +9,7 @@ export const whiteAlpha = {
   700: 'var(--white-alpha-700)',
   800: 'var(--white-alpha-800)',
   900: 'var(--white-alpha-900)',
-}
+};
 
 export const blackAlpha = {
   50: 'var(--black-alpha-50)',
@@ -22,7 +22,7 @@ export const blackAlpha = {
   700: 'var(--black-alpha-700)',
   800: 'var(--black-alpha-800)',
   900: 'var(--black-alpha-900)',
-}
+};
 
 export const gray = {
   50: 'var(--gray-50)',
@@ -35,7 +35,7 @@ export const gray = {
   700: 'var(--gray-700)',
   800: 'var(--gray-800)',
   900: 'var(--gray-900)',
-}
+};
 
 export const red = {
   50: 'var(--red-50)',
@@ -48,7 +48,7 @@ export const red = {
   700: 'var(--red-700)',
   800: 'var(--red-800)',
   900: 'var(--red-900)',
-}
+};
 
 export const orange = {
   50: 'var(--orange-50)',
@@ -61,7 +61,7 @@ export const orange = {
   700: 'var(--orange-700)',
   800: 'var(--orange-800)',
   900: 'var(--orange-900)',
-}
+};
 
 export const yellow = {
   50: 'var(--yellow-50)',
@@ -74,7 +74,7 @@ export const yellow = {
   700: 'var(--yellow-700)',
   800: 'var(--yellow-800)',
   900: 'var(--yellow-900)',
-}
+};
 
 export const green = {
   50: 'var(--green-50)',
@@ -87,7 +87,7 @@ export const green = {
   700: 'var(--green-700)',
   800: 'var(--green-800)',
   900: 'var(--green-900)',
-}
+};
 
 export const teal = {
   50: 'var(--teal-50)',
@@ -100,7 +100,7 @@ export const teal = {
   700: 'var(--teal-700)',
   800: 'var(--teal-800)',
   900: 'var(--teal-900)',
-}
+};
 
 export const blue = {
   50: 'var(--blue-50)',
@@ -113,7 +113,7 @@ export const blue = {
   700: 'var(--blue-700)',
   800: 'var(--blue-800)',
   900: 'var(--blue-900)',
-}
+};
 
 export const cyan = {
   50: 'var(--cyan-50)',
@@ -126,7 +126,7 @@ export const cyan = {
   700: 'var(--cyan-700)',
   800: 'var(--cyan-800)',
   900: 'var(--cyan-900)',
-}
+};
 
 export const purple = {
   50: 'var(--purple-50)',
@@ -139,7 +139,7 @@ export const purple = {
   700: 'var(--purple-700)',
   800: 'var(--purple-800)',
   900: 'var(--purple-900)',
-}
+};
 
 export const pink = {
   50: 'var(--pink-50)',
@@ -152,4 +152,4 @@ export const pink = {
   700: 'var(--pink-700)',
   800: 'var(--pink-800)',
   900: 'var(--pink-900)',
-}
+};

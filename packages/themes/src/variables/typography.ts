@@ -10,18 +10,18 @@ export const fontSize = {
   16: '1rem',
   14: '0.875rem',
   12: '0.75rem',
-}
+};
 
 export const fontWeight = {
   700: '700',
   600: '600',
   500: '500',
   400: '400',
-}
+};
 
 export const lineHeight = {
   150: '150%',
   133: '133%',
   120: '120%',
   100: '100%',
-}
+};

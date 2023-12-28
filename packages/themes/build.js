@@ -1,5 +1,5 @@
 import esbuild from 'esbuild'
-import packageJson from './package-lock.json' assert { type: 'json' }
+import packageJson from './package.json' assert { type: 'json' }
 
 // 개발환경에서는 minify 옵션을 끕니다.
 const dev = process.argv.includes('--dev')

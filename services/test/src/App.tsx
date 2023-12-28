@@ -6,6 +6,8 @@ import styled from '@emotion/styled'
 import { vars, classes } from '@repo/themes'
 
 function App() {
+  console.log(vars.box.shadows)
+
   return <View />
 }
 

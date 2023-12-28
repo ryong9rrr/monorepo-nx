@@ -1,14 +1,17 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
-  root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   extends: [
     'eslint:recommended',
@@ -29,6 +32,9 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {},
+    },
+    react: {
+      version: 'detect',
     },
   },
   rules: {

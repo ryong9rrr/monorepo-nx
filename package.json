@@ -7,8 +7,10 @@
     "services/**/*"
   ],
   "scripts": {
-    "prettier": "prettier --write .",
-    "lint": "eslint . --cache",
+    "postinstall": "husky install",
+    "prettier": "prettier --cache --write .",
+    "lint": "eslint --cache --max-warnings=0 .",
+    "format": "yarn prettier && yarn lint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "nx build",
     "graph": "nx run-many --target=build --graph"
@@ -27,6 +29,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.13",
+    "husky": "^8.0.3",
     "nx": "^17.2.7",
     "prettier": "^3.0.3",
     "typescript": "^5.3.3"

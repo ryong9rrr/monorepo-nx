@@ -4,5 +4,5 @@ import { vars } from '@package/themes';
 export const blockStyle = style({
   width: '100px',
   height: '100px',
-  backgroundColor: vars.colors.$scale.pink['500'],
+  backgroundColor: vars.colors.$scale.pink['900'],
 });

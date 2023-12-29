@@ -11,9 +11,10 @@
     "prettier": "prettier --cache --write .",
     "lint": "eslint --cache --max-warnings=0 .",
     "format": "yarn prettier && yarn lint",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "nx build",
     "graph": "nx run-many --target=build --graph",
+    "affected:build": "nx affected -t build",
+    "build:local": "nx build",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev:all": "yarn dev:storybook & yarn dev:packages",
     "dev:storybook": "nx storybook @service/storybook",
     "dev:packages": "nx run-many --target=dev --projects='@package/react-components-*'"

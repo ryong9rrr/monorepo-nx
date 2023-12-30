@@ -1,11 +1,11 @@
-const { build } = require('esbuild');
+const { build } = require("esbuild");
 
-const run = ({ entryPoints = ['src/index.ts'], pkg, config = {} }) => {
+const run = ({ entryPoints = ["src/index.ts"], pkg, config = {} }) => {
   // 개발환경에서는 minify 옵션을 끕니다.
-  const dev = process.argv.includes('--dev');
+  const dev = process.argv.includes("--dev");
   const minify = !dev;
 
-  const watch = process.argv.includes('--watch');
+  const watch = process.argv.includes("--watch");
 
   const external = Object.keys({
     ...pkg.dependencies,
@@ -17,8 +17,8 @@ const run = ({ entryPoints = ['src/index.ts'], pkg, config = {} }) => {
     bundle: true,
     minify,
     sourcemap: true,
-    outdir: 'dist',
-    target: 'es2019',
+    outdir: "dist",
+    target: "es2019",
     watch, // esbuild 0.16.17버전 이후에는 watch 옵션의 사용방법이 바뀝니다.
     external,
     ...config,
@@ -27,18 +27,18 @@ const run = ({ entryPoints = ['src/index.ts'], pkg, config = {} }) => {
   Promise.all([
     build({
       ...baseConfig,
-      format: 'esm',
+      format: "esm",
     }),
     build({
       ...baseConfig,
-      platform: 'node',
-      format: 'cjs',
+      platform: "node",
+      format: "cjs",
       outExtension: {
-        '.js': '.cjs',
+        ".js": ".cjs",
       },
     }),
   ]).catch(() => {
-    console.error('Build failed');
+    console.error("Build failed");
     process.exit(1);
   });
 };

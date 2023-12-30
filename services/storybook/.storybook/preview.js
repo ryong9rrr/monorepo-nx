@@ -1,10 +1,10 @@
-import '@package/themes/themes.css';
-import './style.css';
+import "@package/themes/themes.css";
+import "./style.css";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -14,16 +14,16 @@ const preview = {
     rootAttributesTooltip: true,
     rootAttributes: [
       {
-        root: 'body',
-        attribute: 'class',
+        root: "body",
+        attribute: "class",
         defaultState: {
-          name: 'light',
-          value: 'theme-light',
+          name: "light",
+          value: "theme-light",
         },
         states: [
           {
-            name: 'dark',
-            value: 'theme-dark',
+            name: "dark",
+            value: "theme-dark",
           },
         ],
       },
@@ -32,18 +32,18 @@ const preview = {
 };
 
 const initTheme = () => {
-  const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   if (isDarkTheme) {
-    document.body.classList.add('theme-dark');
+    document.body.classList.add("theme-dark");
   }
 
-  const mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
-  mediaQueryList.addEventListener('change', e => {
+  const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+  mediaQueryList.addEventListener("change", e => {
     if (e.matches) {
-      document.body.classList.add('theme-dark');
+      document.body.classList.add("theme-dark");
     } else {
-      document.body.classList.remove('theme-dark');
+      document.body.classList.remove("theme-dark");
     }
   });
 };

@@ -16,7 +16,9 @@ const Text = (props: TextProps, ref: React.Ref<HTMLElement>) => {
       ref,
       className: clsx([
         BaseStyle,
-        StyleSprinkles(extractSprinkleProps(props, Array.from(StyleSprinkles.properties))),
+        StyleSprinkles(
+          extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
+        ),
         textStyle({
           fontSize,
         }),

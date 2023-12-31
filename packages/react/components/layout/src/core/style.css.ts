@@ -46,4 +46,8 @@ const BoxShadowStyleProps = defineProperties({
   },
 });
 
-export const StyleSprinkles = createSprinkles(MarginAndPaddingProperties, BorderStyleProperties, BoxShadowStyleProps);
+export const StyleSprinkles = createSprinkles(
+  MarginAndPaddingProperties,
+  BorderStyleProperties,
+  BoxShadowStyleProps,
+);

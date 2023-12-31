@@ -19,7 +19,12 @@ const generateThemeCssVariables = () => {
           const cssVariables = Object.entries(colorValue)
             .map(([mainKey, mainValue]) =>
               Object.entries(mainValue)
-                .map(([subKey, subValue]) => `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`)
+                .map(
+                  ([subKey, subValue]) =>
+                    `--${toCssCasting(mainKey)}-${toCssCasting(
+                      subKey,
+                    )}: ${subValue};`,
+                )
                 .join("\n"),
             )
             .join("\n");
@@ -32,7 +37,12 @@ const generateThemeCssVariables = () => {
           const cssVariables = Object.entries(colorValue)
             .map(([mainKey, mainValue]) =>
               Object.entries(mainValue)
-                .map(([subKey, subValue]) => `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`)
+                .map(
+                  ([subKey, subValue]) =>
+                    `--${toCssCasting(mainKey)}-${toCssCasting(
+                      subKey,
+                    )}: ${subValue};`,
+                )
                 .join("\n"),
             )
             .join("\n");
@@ -48,7 +58,12 @@ const generateThemeCssVariables = () => {
     const cssVariables = Object.entries(value)
       .map(([mainKey, mainValue]) =>
         Object.entries(mainValue)
-          .map(([subKey, subValue]) => `--${toCssCasting(mainKey)}-${toCssCasting(subKey)}: ${subValue};`)
+          .map(
+            ([subKey, subValue]) =>
+              `--${toCssCasting(mainKey)}-${toCssCasting(
+                subKey,
+              )}: ${subValue};`,
+          )
           .join("\n"),
       )
       .join("\n");
@@ -67,10 +82,15 @@ const generateThemeCssClasses = () => {
       .map(([mainKey, mainValue]) =>
         Object.entries(mainValue)
           .map(([subKey, subValue]) => {
-            const className = `.${toCssCasting(mainKey)}${toCssCasting(subKey)}`;
+            const className = `.${toCssCasting(mainKey)}${toCssCasting(
+              subKey,
+            )}`;
 
             const styleProperties = Object.entries(subValue)
-              .map(([styleKey, styleValue]) => `${toCssCasting(styleKey)}: ${styleValue};`)
+              .map(
+                ([styleKey, styleValue]) =>
+                  `${toCssCasting(styleKey)}: ${styleValue};`,
+              )
               .join("\n");
 
             return `${className} {\n${styleProperties}\n}`;

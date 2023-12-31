@@ -1,10 +1,9 @@
 import React from "react";
 import { clsx } from "clsx";
-import { BoxProps } from "./types";
-import { StyleSprinkles } from "../core/style.css";
-import { extractSprinkleProps } from "../utils/properties";
 import { vars } from "@package/themes";
-
+import { BaseStyle, StyleSprinkles } from "../core/style.css";
+import { extractSprinkleProps } from "../utils/properties";
+import { BoxProps } from "./types";
 const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
   const { as = "div", children, color, background } = props;
 
@@ -14,7 +13,10 @@ const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
       ...props,
       ref,
       className: clsx([
-        StyleSprinkles(extractSprinkleProps(props, Array.from(StyleSprinkles.properties))),
+        BaseStyle,
+        StyleSprinkles(
+          extractSprinkleProps(props, Array.from(StyleSprinkles.properties)),
+        ),
         props.className,
       ]),
       style: {

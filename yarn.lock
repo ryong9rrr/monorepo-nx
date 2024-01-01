@@ -2563,6 +2563,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@package/react-components-button@workspace:^, @package/react-components-button@workspace:packages/react/components/button":
+  version: 0.0.0-use.local
+  resolution: "@package/react-components-button@workspace:packages/react/components/button"
+  dependencies:
+    "@package/esbuild-config": "workspace:^"
+    "@package/themes": "workspace:^"
+    "@types/react": "npm:^18.2.45"
+    "@types/react-dom": "npm:^18.2.18"
+    "@vanilla-extract/css": "npm:^1.14.0"
+    "@vanilla-extract/dynamic": "npm:^2.1.0"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.1"
+    "@vanilla-extract/recipes": "npm:^0.5.1"
+    "@vanilla-extract/sprinkles": "npm:^1.6.1"
+    clsx: "npm:^2.1.0"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.3.3"
+  peerDependencies:
+    "@package/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@package/react-components-layout@workspace:^, @package/react-components-layout@workspace:packages/react/components/layout":
   version: 0.0.0-use.local
   resolution: "@package/react-components-layout@workspace:packages/react/components/layout"
@@ -3280,6 +3303,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@service/storybook@workspace:services/storybook"
   dependencies:
+    "@package/react-components-button": "workspace:^"
     "@package/react-components-layout": "workspace:^"
     "@package/themes": "workspace:^"
     "@storybook/addon-docs": "npm:^7.6.6"
@@ -4832,6 +4856,15 @@ __metadata:
     modern-ahocorasick: "npm:^1.0.0"
     outdent: "npm:^0.8.0"
   checksum: 8e5d6419af7249c873db4acf9751044245a004133073fe6c85ae800f6b88794ac4e323612c2dc6fa67ea797bdebf57432f153311e86ab3707110f18d5b038557
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/dynamic@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@vanilla-extract/dynamic@npm:2.1.0"
+  dependencies:
+    "@vanilla-extract/private": "npm:^1.0.3"
+  checksum: dcb8149bd815c4be75184f90e350750b6bc16ffdb5841f62f7211385478589dc0a0b261a442011149c2edbdbd83a956a425eec94f6c735f269a1cdb310541a66
   languageName: node
   linkType: hard
 

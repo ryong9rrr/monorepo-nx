@@ -7,6 +7,7 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@package/react-components-button": "workspace:^",
     "@package/react-components-layout": "workspace:^",
     "@package/themes": "workspace:^",
     "@storybook/addon-docs": "^7.6.6",

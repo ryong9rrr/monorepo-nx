@@ -1,4 +1,3 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import "@package/react-components-layout/style.css";
@@ -24,6 +23,25 @@ const meta: Meta<typeof _Flex> = {
       ],
       control: "select",
     },
+    align: {
+      options: ["flex-start", "flex-end", "center"],
+      control: "select",
+    },
+    direction: {
+      options: ["row", "row-reverse", "column", "column-reverse"],
+      control: "select",
+    },
+    wrap: {
+      options: ["nowrap", "wrap", "wrap-reverse"],
+      control: "select",
+    },
+    gap: {
+      control: {
+        type: "number",
+        min: 0,
+        max: 30,
+      },
+    },
     padding,
     background,
     boxShadow,
@@ -42,7 +60,9 @@ export const FlexStory: Story = {
     background: "blackAlpha",
     boxShadow: "base",
     borderRadius: "md",
-    justify: "space-between",
+    justify: "center",
+    wrap: "no-wrap",
+    gap: 10,
     style: {
       width: "300px",
     },
@@ -51,6 +71,7 @@ export const FlexStory: Story = {
     <_Flex {...args}>
       <div>Item1</div>
       <div>Item2</div>
+      <div>Item3</div>
     </_Flex>
   ),
 };

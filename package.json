@@ -17,7 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:all": "yarn dev:storybook & yarn dev:packages",
     "dev:storybook": "nx storybook @service/storybook",
-    "dev:packages": "nx run-many --target=dev --projects='@package/react-components-*'"
+    "dev:packages": "nx run-many --target=dev --projects='@package/react-components-*,@package/react-hooks-*'"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.5.0",

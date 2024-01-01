@@ -9,6 +9,7 @@
   "devDependencies": {
     "@package/react-components-button": "workspace:^",
     "@package/react-components-layout": "workspace:^",
+    "@package/react-hooks-button": "workspace:^",
     "@package/themes": "workspace:^",
     "@storybook/addon-docs": "^7.6.6",
     "@storybook/addon-essentials": "^7.6.6",

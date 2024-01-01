@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import "@package/react-components-layout/style.css";
 import { Heading as _Heading } from "@package/react-components-layout";
-import { classes, vars } from "@package/themes";
+import { color, fontSizeHeading } from "../../../story-utils/args";
 
 const meta: Meta<typeof _Heading> = {
   title: "React Components/Layout/Typography/Heading",
@@ -16,14 +16,8 @@ const meta: Meta<typeof _Heading> = {
       options: ["h1", "h2", "h3", "h4", "h5", "h6"],
       control: "select",
     },
-    fontSize: {
-      options: Object.keys(classes.typography.heading),
-      control: "select",
-    },
-    color: {
-      options: Object.keys(vars.colors.$scale),
-      control: "select",
-    },
+    fontSize: fontSizeHeading,
+    color,
   },
 };
 

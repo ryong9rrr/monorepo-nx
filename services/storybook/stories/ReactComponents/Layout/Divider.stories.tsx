@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import "@package/react-components-layout/style.css";
 import { Divider as _Divider, Box } from "@package/react-components-layout";
-import { vars } from "@package/themes";
+import { color } from "../../../story-utils/args";
 
 const meta: Meta<typeof _Divider> = {
   title: "React Components/Layout/Divider",
@@ -28,10 +28,7 @@ const meta: Meta<typeof _Divider> = {
       options: ["solid", "dashed"],
       control: "select",
     },
-    color: {
-      options: Object.keys(vars.colors.$scale),
-      control: "select",
-    },
+    color,
   },
 };
 

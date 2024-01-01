@@ -2,7 +2,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import "@package/react-components-layout/style.css";
 import { Box as _Box } from "@package/react-components-layout";
-import { vars } from "@package/themes";
+import {
+  as,
+  background,
+  borderRadius,
+  boxShadow,
+  padding,
+} from "../../../story-utils/args";
 
 const meta: Meta<typeof _Box> = {
   title: "React Components/Layout/Box",
@@ -12,26 +18,11 @@ const meta: Meta<typeof _Box> = {
   },
   tags: ["autodocs"],
   argTypes: {
-    as: {
-      options: ["div", "span", "button"],
-      control: "select",
-    },
-    padding: {
-      options: Object.keys(vars.box.spacing),
-      control: "select",
-    },
-    background: {
-      options: Object.keys(vars.colors.$scale),
-      control: "select",
-    },
-    boxShadow: {
-      options: Object.keys(vars.box.shadows),
-      control: "select",
-    },
-    borderRadius: {
-      options: Object.keys(vars.box.radii),
-      control: "select",
-    },
+    as,
+    padding,
+    background,
+    boxShadow,
+    borderRadius,
   },
 };
 

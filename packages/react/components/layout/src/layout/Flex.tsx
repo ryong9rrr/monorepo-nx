@@ -3,10 +3,23 @@ import { clsx } from "clsx";
 import { vars } from "@package/themes";
 import { BaseStyle, StyleSprinkles } from "../core/style.css";
 import { extractSprinkleProps } from "../utils/properties";
-import { BoxProps } from "./types";
+import { FlexProps } from "./types";
 
-const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
-  const { as = "div", children, color, background } = props;
+const Flex = (props: FlexProps, ref: React.Ref<HTMLElement>) => {
+  const {
+    as = "div",
+    color,
+    background,
+    align,
+    basis,
+    direction,
+    grow,
+    justify,
+    shrink,
+    wrap,
+    gap,
+    children,
+  } = props;
 
   return React.createElement(
     as,
@@ -21,6 +34,15 @@ const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
         props.className,
       ]),
       style: {
+        display: "flex",
+        alignItems: align,
+        justifyContent: justify,
+        flexDirection: direction,
+        flexWrap: wrap,
+        flexGrow: grow,
+        flexShrink: shrink,
+        flexBasis: basis,
+        gap,
         color: color && vars.colors.$scale?.[color]?.[700],
         background: background && vars.colors.$scale?.[background]?.[100],
         ...props.style,
@@ -30,5 +52,5 @@ const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
   );
 };
 
-const _Box = React.forwardRef(Box);
-export { _Box as Box };
+const _Flex = React.forwardRef(Flex);
+export { _Flex as Flex };

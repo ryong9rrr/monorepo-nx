@@ -1,6 +1,7 @@
 import { vars } from "@package/themes";
 import { CSSProperties } from "@vanilla-extract/css";
 import { AsElementProps, StyleProps } from "../core/types";
+import { TextProps } from "../typography";
 
 export type BoxProps = AsElementProps & StyleProps;
 
@@ -45,3 +46,16 @@ export type GridItemProps = {
   rowStart?: CSSProperties["gridRowStart"];
   rowSpan?: CSSProperties["gridRow"];
 } & BoxProps;
+
+export type ListProps = {
+  variant?: "ordered" | "unordered";
+  spacing?: keyof typeof vars.box.spacing;
+} & BoxProps;
+
+export type OrderListProps = Omit<ListProps, "variant">;
+
+export type UnorderedListProps = Omit<ListProps, "variant"> & {
+  listStyleType?: CSSProperties["listStyleType"];
+};
+
+export type ListItemProps = TextProps;

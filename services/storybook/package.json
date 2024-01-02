@@ -9,6 +9,7 @@
   "dependencies": {
     "@package/react-components-accordion": "workspace:^",
     "@package/react-components-button": "workspace:^",
+    "@package/react-components-input": "workspace:^",
     "@package/react-components-layout": "workspace:^",
     "@package/react-hooks-button": "workspace:^",
     "@package/themes": "workspace:^",

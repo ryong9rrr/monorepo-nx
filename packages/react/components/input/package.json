@@ -1,5 +1,5 @@
 {
-  "name": "@package/react-components-button",
+  "name": "@package/react-components-input",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -38,7 +38,7 @@
     "react": "*"
   },
   "dependencies": {
-    "@package/react-hooks-button": "workspace:^",
+    "@package/react-hooks-input": "workspace:^",
     "clsx": "^2.1.0"
   }
 }

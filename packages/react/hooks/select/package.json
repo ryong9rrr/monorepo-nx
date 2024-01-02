@@ -11,7 +11,6 @@
     }
   },
   "scripts": {
-    "test": "echo \"Tada!\"",
     "build": "yarn clean && yarn build:js && yarn build:type",
     "build:js": "node ./build.js",
     "build:type": "yarn tsc --emitDeclarationOnly",

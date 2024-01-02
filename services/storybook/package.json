@@ -2,6 +2,9 @@
   "name": "@service/storybook",
   "packageManager": "yarn@4.0.2",
   "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
     "build": "",
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build"
@@ -30,10 +33,13 @@
     "@storybook/test": "^7.6.6",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/ui": "^1.1.1",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.6",
     "storybook-addon-root-attributes": "^2.0.3",
     "typescript": "^5.3.3",
-    "vite": "^5.0.10"
+    "vite": "^5.0.10",
+    "vitest": "^1.1.1"
   }
 }

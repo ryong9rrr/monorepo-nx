@@ -2681,6 +2681,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@package/react-components-toast@workspace:^, @package/react-components-toast@workspace:packages/react/components/toast":
+  version: 0.0.0-use.local
+  resolution: "@package/react-components-toast@workspace:packages/react/components/toast"
+  dependencies:
+    "@package/esbuild-config": "workspace:^"
+    "@package/themes": "workspace:^"
+    "@types/react": "npm:^18.2.45"
+    "@types/react-dom": "npm:^18.2.18"
+    "@vanilla-extract/css": "npm:^1.14.0"
+    "@vanilla-extract/dynamic": "npm:^2.1.0"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.1"
+    "@vanilla-extract/recipes": "npm:^0.5.1"
+    "@vanilla-extract/sprinkles": "npm:^1.6.1"
+    clsx: "npm:^2.1.0"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.3.3"
+  peerDependencies:
+    "@package/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@package/react-hooks-button@workspace:^, @package/react-hooks-button@workspace:packages/react/hooks/button":
   version: 0.0.0-use.local
   resolution: "@package/react-hooks-button@workspace:packages/react/hooks/button"
@@ -3446,6 +3469,7 @@ __metadata:
     "@package/react-components-input": "workspace:^"
     "@package/react-components-layout": "workspace:^"
     "@package/react-components-select": "workspace:^"
+    "@package/react-components-toast": "workspace:^"
     "@package/react-hooks-button": "workspace:^"
     "@package/themes": "workspace:^"
     "@storybook/addon-docs": "npm:^7.6.6"

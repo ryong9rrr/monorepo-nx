@@ -1,4 +1,4 @@
-import type { Meta } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import "@package/react-components-layout/style.css";
 import "@package/react-components-accordion/style.css";
 import {
@@ -48,6 +48,46 @@ export const AccordionStory = {
           </Text>
         </AccordionPanel>
       </AccordionItem>
+    </Accordion>
+  ),
+};
+
+export const AccordionTestStory: StoryObj<{
+  items: Array<{ name: string; content: string }>;
+  defaultActiveItems: string[];
+}> = {
+  args: {
+    items: [
+      {
+        name: "목록1",
+        content: "내용입니다.",
+      },
+      {
+        name: "목록2",
+        content: "내용입니다.\n내용입니다.",
+      },
+    ],
+    defaultActiveItems: [],
+  },
+  render: ({ defaultActiveItems, items }) => (
+    <Accordion
+      defaultActiveItems={defaultActiveItems}
+      style={{ width: "500px" }}
+    >
+      {items.map((item, index) => (
+        <AccordionItem key={item.name} itemName={item.name}>
+          <AccordionButton data-testid={`button-${index}`}>
+            <Heading color="gray" fontSize="lg">
+              {item.name}
+            </Heading>
+          </AccordionButton>
+          <AccordionPanel data-testid={`panel-${index}`}>
+            <Text color="gray" fontSize="md">
+              {item.content}
+            </Text>
+          </AccordionPanel>
+        </AccordionItem>
+      ))}
     </Accordion>
   ),
 };

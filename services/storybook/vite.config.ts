@@ -10,4 +10,7 @@ export default defineConfig({
     environment: "happy-dom",
     include: ["./stories/**/*.test.ts?(x)"],
   },
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
 });

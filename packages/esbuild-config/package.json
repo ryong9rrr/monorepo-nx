@@ -5,6 +5,9 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "build": ""
+  },
   "devDependencies": {
     "esbuild": "^0.16.17"
   }

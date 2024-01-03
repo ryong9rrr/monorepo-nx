@@ -5,9 +5,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
-    "build": "yarn build-storybook",
     "storybook": "storybook dev -p 6006 --no-open",
-    "build-storybook": "storybook build"
+    "build": "",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --exit-zero-on-changes -d storybook-static/"
   },
   "dependencies": {
     "@package/react-components-accordion": "workspace:^",
@@ -40,6 +41,7 @@
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/ui": "^1.1.1",
+    "chromatic": "^10.2.0",
     "happy-dom": "^12.10.3",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.6",
@@ -48,5 +50,8 @@
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
     "vitest": "^1.1.1"
-  }
+  },
+  "version": "",
+  "readme": "ERROR: No README data found!",
+  "_id": "@service/storybook@"
 }

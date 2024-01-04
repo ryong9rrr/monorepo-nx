@@ -3818,6 +3818,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@service/web@workspace:services/web":
+  version: 0.0.0-use.local
+  resolution: "@service/web@workspace:services/web"
+  dependencies:
+    "@package/react-components-button": "workspace:^"
+    "@package/react-components-layout": "workspace:^"
+    "@package/react-components-toast": "workspace:^"
+    "@package/themes": "workspace:^"
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^18"
+    "@types/react-dom": "npm:^18"
+    next: "npm:14.0.4"
+    react: "npm:^18"
+    react-dom: "npm:^18"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "@sinclair/typebox@npm:^0.27.8":
   version: 0.27.8
   resolution: "@sinclair/typebox@npm:0.27.8"
@@ -5162,7 +5180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.10.6":
+"@types/node@npm:^20, @types/node@npm:^20.10.6":
   version: 20.10.6
   resolution: "@types/node@npm:20.10.6"
   dependencies:
@@ -5206,7 +5224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.2.18":
+"@types/react-dom@npm:^18, @types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.2.18":
   version: 18.2.18
   resolution: "@types/react-dom@npm:18.2.18"
   dependencies:
@@ -5226,7 +5244,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.46":
+"@types/react@npm:^18, @types/react@npm:^18.2.46":
   version: 18.2.46
   resolution: "@types/react@npm:18.2.46"
   dependencies:
@@ -12701,7 +12719,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^14.0.4":
+"next@npm:14.0.4, next@npm:^14.0.4":
   version: 14.0.4
   resolution: "next@npm:14.0.4"
   dependencies:
@@ -13948,7 +13966,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.2.0":
+"react-dom@npm:^18, react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -14061,7 +14079,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.2.0":
+"react@npm:^18, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:

@@ -1,4 +1,6 @@
 import { join, dirname } from "path";
+import "@package/themes/themes.css";
+import "./style.css";
 
 /**
  * This function is used to resolve the absolute path of a package.

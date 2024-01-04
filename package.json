@@ -16,8 +16,9 @@
     "affected:build": "nx affected -t build",
     "build:local": "nx build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:all": "yarn dev:storybook & yarn dev:packages",
+    "dev:all": "yarn dev:storybook & yarn dev:packages & yarn dev:services",
     "dev:storybook": "nx storybook @service/storybook",
+    "dev:services": "nx run-many --target=dev --projects='@service/*'",
     "dev:packages": "nx run-many --target=dev --projects='@package/react-components-*,@package/react-hooks-*'"
   },
   "devDependencies": {

@@ -16,14 +16,14 @@ export const ToastProvider = ({ children }: React.PropsWithChildren) => {
       setToastPayload(null);
 
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
+        window.clearTimeout(timeoutRef.current);
         timeoutRef.current = null;
       }
     }
 
     setToastPayload(toastProps.payload);
 
-    timeoutRef.current = setTimeout(() => {
+    timeoutRef.current = window.setTimeout(() => {
       setToastPayload(null);
       timeoutRef.current = null;
     }, duration);
